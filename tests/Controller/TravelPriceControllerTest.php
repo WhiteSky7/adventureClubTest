@@ -18,7 +18,7 @@ class TravelPriceControllerTest extends AbstractControllerTest
                 "birthdate" => $birthDate,
                 "travelDate" => $travelDate
             ];
-        $response = $this->sendRequest("POST", "http://localhost:8000/travel/price", $data,[]);
+        $response = $this->sendRequest("POST", 'https://127.0.0.1:'.$_ENV['PORT'].'/travel/price', $data,[]);
         $intResponse = (int)$response->getContent("result");
 
         $this->assertEquals(200, $response->getStatusCode());

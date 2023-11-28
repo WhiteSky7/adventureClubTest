@@ -31,7 +31,7 @@ final class CalculateControllerTest extends AbstractControllerTest
             'secondParam' =>$secondParam
         ];
 
-        $response = $this->sendRequest("GET", 'https://127.0.0.1:8000/calculate/' ,[],$data);
+        $response = $this->sendRequest("GET", 'https://127.0.0.1:'.$_ENV['PORT'].'/calculate/' ,[],$data);
         $this->assertEquals(200, $response->getStatusCode());
 //        $this->assertIsInt((int)$response->getContent('result'));
 

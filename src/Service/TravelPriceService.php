@@ -14,7 +14,7 @@ class TravelPriceService
     const maxSale = 4500;
 
     const highAgeResponse = 'Ребенок совершенолетний на момент начала путишествия';
-    public function calculateAgeTravel(int $price, string $birthDay, string $travelDate)
+    public function calculateTravelPrice(int $price, string $birthDay, string $travelDate)
     {
         $age = $this->getAgeOnTravel($birthDay,$travelDate);
 

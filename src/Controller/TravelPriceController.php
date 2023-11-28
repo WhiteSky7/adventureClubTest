@@ -24,7 +24,7 @@ class TravelPriceController extends AbstractController
         $birthDate = $travelPrice->birthdate;
         $travelDate = $travelPrice->travelDate;
 
-        $result = $travelPriceSevice->calculateAgeTravel($price,$birthDate,$travelDate);
+        $result = $travelPriceSevice->calculateTravelPrice($price,$birthDate,$travelDate);
 
         return new JsonResponse(['result' => $result]);
     }

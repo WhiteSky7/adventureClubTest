@@ -16,19 +16,19 @@ final class TravelPriceServiceTest extends TestCase
 
     public function testSaleFor3Year()
     {
-        $this->assertEquals(2000,$this->childTravelService->calculateAgeTravel(10000,'2020-01-10','2023-01-10'));
+        $this->assertEquals(2000,$this->childTravelService->calculateTravelPrice(10000,'2020-01-10','2023-01-10'));
     }
     public function testSaleFor6Year()
     {
-        $this->assertEquals(3500,$this->childTravelService->calculateAgeTravel(5000,'2017-01-10','2023-01-10'));
+        $this->assertEquals(3500,$this->childTravelService->calculateTravelPrice(5000,'2017-01-10','2023-01-10'));
     }
     public function testSaleFor12Year()
     {
-        $this->assertEquals(1000,$this->childTravelService->calculateAgeTravel(10000,'2011-01-10','2023-01-10'));
+        $this->assertEquals(1000,$this->childTravelService->calculateTravelPrice(10000,'2011-01-10','2023-01-10'));
     }
     public function testSaleForElder18Year()
     {
-        $this->assertEquals($this->childTravelService::highAgeResponse,$this->childTravelService->calculateAgeTravel(10000,'2000-01-10','2023-01-10'));
+        $this->assertEquals($this->childTravelService::highAgeResponse,$this->childTravelService->calculateTravelPrice(10000,'2000-01-10','2023-01-10'));
     }
 
 }
